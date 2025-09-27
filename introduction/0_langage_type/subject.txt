@@ -1,0 +1,69 @@
+Comme introduction au Cpp comprendre les types serait un bon point de commencement !
+
+Alors jeune padawan, voici ce que tu devras faire pour prouver tes talents...
+
+####################
+####################
+---     EX00    ---
+####################
+####################
+
+Ecrire un programme qui :
+
+-	instruction 1
+
+-	instruction 2
+
+-	...
+
+-	instruction N
+
+
+Fonctions et librairies autorisees :	
+
+Fichiers a rendre :
+
+####################
+####################
+---     EX01    ---
+####################
+####################
+
+
+Ecrire un programme qui :
+
+-       instruction 1
+
+-       instruction 2
+
+-       ...
+
+-       instruction N
+
+
+Fonctions et librairies autorisees : 
+
+Fichiers a rendre :
+
+####################
+####################
+---	EX02	---
+####################
+####################
+
+Ecrire un programme qui :
+
+-       instruction 1
+
+-       instruction 2
+
+-       ...
+
+-       instruction N
+
+
+Fonctions et librairies autorisees : 
+
+Fichiers a rendre :
+
+

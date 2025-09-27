@@ -1,0 +1,8 @@
+Les headers (fichiers.h) sont un comme les import en python, c'est bien utile !
+
+Alors jeune padawan, voici ce que tu devras faire pour prouver tes talents...
+
+Voir dans le repo Support_cours_C_MT2, le module C09
+
+
+
