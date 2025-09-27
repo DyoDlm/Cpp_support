@@ -1,4 +1,5 @@
 #include "Zombie.hpp"
+#include <iostream>
 
 bool	inputOk(std::string s)
 {
