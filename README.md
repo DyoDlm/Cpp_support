@@ -1,5 +1,11 @@
 Salutation jeune curieux !
 
+#   COMMENT TESTER VOS PROGRAMMES   #
+
+1) Respecter les formats demander dans les sujets
+
+
+
 
 #   CONCERNANT LE STYLE  #
 
@@ -11,8 +17,7 @@ Citation de Richar Stallam :
    Le style est style, ah, oui oui
 
 
-
-#   En termes pedagogiques, quelques conseilsi  #
+#   En termes pedagogiques, quelques conseil  #
 
     A)  Faites vos tests (mains)
 
