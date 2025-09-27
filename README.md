@@ -3,7 +3,9 @@ Salutation jeune curieux !
 #   COMMENT TESTER VOS PROGRAMMES   #
 
 1) Respecter les formats demander dans les sujets
+Ca me permettra d'integrer des tests plus facilement
 
+2) Pour l'instant testez les vous meme
 
 
 
