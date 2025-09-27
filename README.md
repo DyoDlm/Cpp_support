@@ -1,4 +1,22 @@
-Salutation jeune curieux !
+
+#   Generalites et structure du repo    #
+
+-   Un repertoire "Introduction" si jamais le sombre C tu n'as touche
+
+-   Un repertoire "ressources" avec des ressources utilses
+
+-   Sinon le repo est organise par modules (cpp00, cpp01, ..., cpp07)
+
+-   Dans chaque module, tu trouveras :
+        1) Le sujet en format PDF
+        2) L'evalsheet correspondante (Conseil: Ne pas la consulter avant d'avoir fini tous les exercices)
+        3) Un repertoire pour chaque exercice dans lequel tu trouveras :
+            a) La place pour y creer des fichiers de l'exercices
+            b) Les fichiers Colors.* (pour coder en couleur (waw!))
+            c) Un repertoire test dans lequel tu trouveras
+                aa) un script shell pour tester si ton code est correct (en construction)
+                bb) un main qui devra compiler avec ton code
+
 
 #   COMMENT TESTER VOS PROGRAMMES   #
 
