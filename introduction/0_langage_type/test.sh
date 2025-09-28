@@ -22,10 +22,15 @@ echo Functions to test : $to_test
 sleep 1
 
 pretty_output() {
+	echo 
+	echo
 	case $2 in
-		"SUCCESS") echo -e "$1 $GREEN HAS COMPILED AND WAS TESTED WITH SUCCESS !$NC" ;;
-		"FAILED")  echo -e "$1 $RED HAS FAILED, RETRY...$NC" ;;
+		"SUCCESS") echo -e "$GREEN [OK] $NC $1 $GREEN HAS COMPILED AND WAS TESTED WITH SUCCESS !$NC" ;;
+		"FAILED")  echo -e "$RED [KO] $NC $1 $RED HAS FAILED, RETRY...$NC" ;;
+		"NORM") echo -e "$RED [KO] $NC $YELLOW NORM ERROR $RED YOU SUCK $NC" ;;
 	esac
+	echo 
+	echo
 }
 
 for ARGS in \
@@ -38,19 +43,32 @@ do
 	for i in $to_test
 	do
 		if [ $i == $ARGS ] ; then
+			norminette $i | grep "Error!" > norm.log
+			n=$(cat norm.log | wc -l)
+			if (( n == 0 )) ; then
+				pretty_output $ARGS NORM
+			fi
+			rm norm.log
 			echo TESTING $i
 			program=$(echo $i | tr -d ".c")
 			puser="User$program"
 			pcorr="Corr$program"
-			gcc -Wall -Wextra -Werror pastouche/main.c $i -o $puser > user.log
+			gcc -Wall -Wextra -Werror pastouche/main.c *.c -o $puser > user.log
 			if [ $? -ne 0 ]; then
 				echo "$YELLOW [WARNING] : Compilation failed$NC"
 				pretty_output $ARGS FAILED
 				continue
 			fi
-			gcc -Wall -Wextra -Werror pastouche/main.c $i -o $pcorr > corr.log
+			gcc -Wall -Wextra -Werror pastouche/main.c pastouche/srcs/*.c -o $pcorr > corr.log
+			echo LS
+			ls
+			echo EXECUTION
 			./$puser >> user.log
 			./$pcorr >> corr.log
+			echo USER LOG
+			cat user.log
+			echo CORR LOG
+			cat corr.log
 			nombre_de_traces=$(ls traces | wc -l)
 			trace_name="trace_$program'_'$nombre_de_traces'.log'"
 			diff -q user.log corr.log > $trace_name

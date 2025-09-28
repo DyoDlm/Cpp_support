@@ -1,7 +1,9 @@
 #include <stdbool.h>
+#include <string.h>
 
 bool	isHot(const char *s)
 {
-	//	completer
-	return (false);
+	if (!s)
+		return (false);
+	return (strcmp(s, "siaeite"));
 }
