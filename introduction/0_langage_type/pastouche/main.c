@@ -2,32 +2,38 @@
 #include <string.h>
 #include <stdbool.h>
 
-static bool	test_ft_strlen()
+bool	ft_strlen(void);
+bool	isHot(void);
+bool	ft_strToUpper(void);
+bool	ft_strToLower(void);
+bool	ft_memcpy(void);
+
+static bool	test_ft_strlen(void)
 {
 	return true;
 }
 
-static bool	test_isHot()
+static bool	test_isHot(void)
 {
 	return true;
 }
 
-static bool	test_ft_strToUpper()
+static bool	test_ft_strToUpper(void)
 {
 	return true;
 }
 
-static bool	test_ft_strToLower()
+static bool	test_ft_strToLower(void)
 {
 	return true;
 }
 
-static bool	test_ft_memcpy()
+static bool	test_ft_memcpy(void)
 {
 	return true;
 }
 
-typedef struct enum
+typedef enum e_types
 {
 	STRLEN,
 	ISHOT,
@@ -35,9 +41,9 @@ typedef struct enum
 	LOWER,
 	MEMCPY,
 	OTHER
-};
+}	t_types;
 
-typedef int	(*t_test)(void);
+typedef bool	(*t_test)(void);
 
 int	main(int ac, char **av)
 {
@@ -45,7 +51,7 @@ int	main(int ac, char **av)
 		"ft_strlen", "isHot", "ft_strToUpper",
 		"ft_strToLower", "ft_memcpy", NULL
 	};
-	static t_test testers[] = {
+	t_test testers[] = {
 		test_ft_strlen, test_isHot, test_ft_strToUpper,
 		test_ft_strToLower, test_ft_memcpy, NULL
 	};
@@ -60,9 +66,10 @@ int	main(int ac, char **av)
 			break ;
 		test++;
 	}
-	
+	if (test == OTHER)
+		return (printf("KO\n"));	
 	status = testers[test]();
-	
+
 	if (status)
 		printf("OK\n");
 	else
