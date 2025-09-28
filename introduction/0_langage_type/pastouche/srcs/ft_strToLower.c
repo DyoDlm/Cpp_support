@@ -18,5 +18,6 @@ void	ft_strToLower(const char *s)
 		else
 			to_print = s[i];
 		write(1, &to_print, 1);
+		i++;
 	}
 }

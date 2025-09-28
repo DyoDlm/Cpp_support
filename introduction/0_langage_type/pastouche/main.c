@@ -2,34 +2,84 @@
 #include <string.h>
 #include <stdbool.h>
 
-bool	ft_strlen(void);
-bool	isHot(void);
-bool	ft_strToUpper(void);
-bool	ft_strToLower(void);
-bool	ft_memcpy(void);
+bool	ft_strlen(const char *s);
+bool	isHot(const char *s);
+bool	ft_strToUpper(const char *s);
+bool	ft_strToLower(const char *s);
+bool	ft_memcpy(void *dst, void *src, size_t dst_size);
 
 static bool	test_ft_strlen(void)
 {
+	size_t	len;
+	
+	len = ft_strlen("aaa");
+	printf("len : %ld\n", len);
+	len = ft_strlen("");
+        printf("len : %ld\n", len);
+        len = ft_strlen(NULL);
+	printf("len : %ld\n", len);
+        len = ft_strlen("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        printf("len : %ld\n", len);
+        len = ft_strlen("aa aa aa aa ");
+        printf("len : %ld\n", len);
+        len = ft_strlen("zub zub");
+        printf("len : %ld\n", len);
 	return true;
 }
 
 static bool	test_isHot(void)
 {
+	static char	*personnes[] = {
+		"seite", "Seite", "SeITe", "SehIte", "SEITE", "THOMAS", "COHEN",
+		"MORE TESTS ...", NULL
+	};
+
+	for (int i = 0; personnes[i]; i++)
+		isHot(personnes[i]) ? printf("%s is Hot\n", personnes[i]) : printf("%s is not Hot\n", personnes[i]);
+	(void)isHot(NULL);
 	return true;
 }
 
 static bool	test_ft_strToUpper(void)
 {
+	static char	*strs[] = {"abc", "12345", "aec3w5ac", "c'est une belle journee", 
+		"qu'est ce que je fous devant un ordi 13njc!!!?#a", "", "Thomas s'est-il bouge le cul ???", NULL
+	};
+	for (int i = 0; strs[i]; i++)
+		ft_strToUpper(strs[i]);
+	ft_strToUpper(NULL);
 	return true;
 }
 
 static bool	test_ft_strToLower(void)
 {
+	static char     *strs[] = {"abc", "12345", "aec3w5ac", "c'est une belle journee",
+                "qu'est ce que je fous devant un ordi 13njc!!!?#a", "", "Thomas s'est-il bouge le cul ???", NULL
+        };
+
+        for (int i = 0; strs[i]; i++)
+                ft_strToLower(strs[i]);
+        ft_strToLower(NULL);
+
 	return true;
 }
 
+#include <stdlib.h>
+#include <string.h>
+
 static bool	test_ft_memcpy(void)
 {
+        static char     *strs[] = {"abc", "12345", "aec3w5ac", "c'est une belle journee",
+                "qu'est ce que je fous devant un ordi 13njc!!!?#a", "", "Thomas s'est-il bouge le cul ???", NULL
+        };
+	
+	for (int i = 0; strs[i]; i++)
+	{
+		char	*dst = malloc((strlen(strs[i]) + 1) * sizeof(char));
+		dst = (char *)ft_memcpy(&dst, &strs[i], strlen(strs[i]) + 1);
+		printf("For str is : %s\nDst is : %s\n", strs[i], dst);
+		free(dst);
+	}
 	return true;
 }
 
@@ -69,10 +119,6 @@ int	main(int ac, char **av)
 	if (test == OTHER)
 		return (printf("KO\n"));	
 	status = testers[test]();
-
-	if (status)
-		printf("OK\n");
-	else
-		printf("KO\n");
+	(void)status;
 	return (0);
 }

@@ -1,11 +1,11 @@
 #include <unistd.h>
 
-static int	isUpper(int c)
+static int	isLower(int c)
 {
 	return ((c >= 'a' && c <= 'z'));
 }
 
-void	ft_strToLower(const char *s)
+void	ft_strToUpper(const char *s)
 {
 	int	i;
 	char	to_print;
@@ -18,5 +18,6 @@ void	ft_strToLower(const char *s)
 		else
 			to_print = s[i];
 		write(1, &to_print, 1);
+		i++;
 	}
 }
