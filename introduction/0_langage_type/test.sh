@@ -51,14 +51,14 @@ do
 			gcc -Wall -Wextra -Werror pastouche/main.c $i -o $pcorr > corr.log
 			./$puser >> user.log
 			./$pcorr >> corr.log
-			nombre_de_traces=$(ls traces/* | wc -l)
+			nombre_de_traces=$(ls traces | wc -l)
 			trace_name="trace_$program'_'$nombre_de_traces'.log'"
 			diff -q user.log corr.log > $trace_name
 			rm user.log
 			rm corr.log
-			n=$(cat $trace_name | wc -l)
+			ok=$(cat $trace_name | wc -l)
 			mv $trace_name traces
-			if (( n == 0 )) ; then
+			if (( ok == 0 )) ; then
 				pretty_output $ARGS SUCCESS
 			else
 				pretty_output $ARGS FAILED
