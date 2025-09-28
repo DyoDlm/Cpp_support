@@ -2,7 +2,10 @@ Les headers (fichiers.h) sont un comme les import en python, c'est bien utile !
 
 Alors jeune padawan, voici ce que tu devras faire pour prouver tes talents...
 
-Voir dans le repo Support_cours_C_MT2, le module C09
+Voir dans le repo Support_cours_C_MT2, le module C08
 
+(en faire un ou deux suffit)
+
+Si t'as la flemme, prendre example des codes dans ressources pour s'inspirer des grandes lignes (#ifndef, #define, #endif, #include, ...)
 
 

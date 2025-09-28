@@ -2,7 +2,7 @@ Les makefiles sont banger pour tester rapidement et s'eviter les etapes de compi
 
 Alors jeune padawan, voici ce que tu devras faire pour prouver tes talents...
 
-Voir dans le repo Support_cours_C_MT2, le module C10
+Voir dans le repo Support_cours_C_MT2, le module C09
 
 Si t'as la flemme, voir dans ressources le fichier Makefile que j'utilise regulierement
 

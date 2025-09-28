@@ -1,69 +1,25 @@
-Comme introduction au Cpp comprendre les types serait un bon point de commencement !
+Hellooo
 
-Alors jeune padawan, voici ce que tu devras faire pour prouver tes talents...
-
-####################
-####################
----     EX00    ---
-####################
-####################
-
-Ecrire un programme qui :
-
--	instruction 1
-
--	instruction 2
-
--	...
-
--	instruction N
+Ecrire la replique de 
 
 
-Fonctions et librairies autorisees :	
+size_t	strlen(char *s);
+-->	renvoyer la longueur de la chaine
 
-Fichiers a rendre :
+void	strToUpper(char *s);
+-->	afficher la string en minuscules
 
-####################
-####################
----     EX01    ---
-####################
-####################
+void	strToLower(char *s);
+-->	afficher la string en majuscules 
 
+bool	isHot(char *s);
+-->	si s est "seite" alors return true, sinon false 
 
-Ecrire un programme qui :
+void	*memcpy(char *src, char *dst, size_t dst_size);
+-->	Copy src to dst
 
--       instruction 1
-
--       instruction 2
-
--       ...
-
--       instruction N
-
-
-Fonctions et librairies autorisees : 
-
-Fichiers a rendre :
-
-####################
-####################
----	EX02	---
-####################
-####################
-
-Ecrire un programme qui :
-
--       instruction 1
-
--       instruction 2
-
--       ...
-
--       instruction N
-
-
-Fonctions et librairies autorisees : 
-
-Fichiers a rendre :
-
-
+Tu pourras tester avec test.sh tel que :
+	./test.sh strlen
+	./test.sh strToUpper
+	ou
+	./test.sh all
