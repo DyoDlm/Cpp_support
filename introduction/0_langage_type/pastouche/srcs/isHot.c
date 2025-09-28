@@ -5,5 +5,5 @@ bool	isHot(const char *s)
 {
 	if (!s)
 		return (false);
-	return (strcmp(s, "alex"));
+	return (strcmp(s, "seite"));
 }
