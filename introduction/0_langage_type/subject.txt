@@ -1,22 +1,22 @@
 Hellooo
 
-Ecrire la replique de 
+Ecrire les fonctions suivantes prototypees telles que : 
 
 
-size_t	strlen(char *s);
+size_t	ft_strlen(const char *s);
 -->	renvoyer la longueur de la chaine
 
-void	strToUpper(char *s);
+void	ft_strToUpper(const char *s);
 -->	afficher la string en minuscules
-
-void	strToLower(char *s);
+ 
+void	ft_strToLower(const char *s);
 -->	afficher la string en majuscules 
 
-bool	isHot(char *s);
+bool	isHot(const char *s);
 -->	si s est "seite" alors return true, sinon false 
 
-void	*memcpy(char *src, char *dst, size_t dst_size);
--->	Copy src to dst
+void	*ft_memcpy(void *src, void *dst, size_t dst_size);
+-->	Copy src to dst and return pointer of dst
 
 Tu pourras tester avec test.sh tel que :
 	./test.sh strlen
