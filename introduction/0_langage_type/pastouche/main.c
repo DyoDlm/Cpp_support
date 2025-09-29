@@ -2,11 +2,11 @@
 #include <string.h>
 #include <stdbool.h>
 
-bool	ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 bool	isHot(const char *s);
-bool	ft_strToUpper(const char *s);
-bool	ft_strToLower(const char *s);
-bool	ft_memcpy(void *dst, void *src, size_t dst_size);
+void	ft_strToUpper(const char *s);
+void	ft_strToLower(const char *s);
+void	*ft_memcpy(void *dst, void *src, size_t dst_size);
 
 static bool	test_ft_strlen(void)
 {
@@ -72,14 +72,17 @@ static bool	test_ft_memcpy(void)
         static char     *strs[] = {"abc", "12345", "aec3w5ac", "c'est une belle journee",
                 "qu'est ce que je fous devant un ordi 13njc!!!?#a", "", "Thomas s'est-il bouge le cul ???", NULL
         };
-	
+	char	*dst;
+
+	printf("\nIn\n");
 	for (int i = 0; strs[i]; i++)
 	{
-		char	*dst = malloc((strlen(strs[i]) + 1) * sizeof(char));
-		dst = (char *)ft_memcpy(&dst, &strs[i], strlen(strs[i]) + 1);
+		dst = malloc((strlen(strs[i]) + 1) * sizeof(char));
+		dst = ft_memcpy(dst, strs[i], strlen(strs[i]));
 		printf("For str is : %s\nDst is : %s\n", strs[i], dst);
 		free(dst);
 	}
+	printf("\nOut\n");
 	return true;
 }
 
@@ -99,7 +102,7 @@ int	main(int ac, char **av)
 {
 	static const char	*tests[] = {
 		"ft_strlen", "isHot", "ft_strToUpper",
-		"ft_strToLower", "ft_memcpy", NULL
+		"ft_strToLower", "ft_mempy", NULL
 	};
 	t_test testers[] = {
 		test_ft_strlen, test_isHot, test_ft_strToUpper,

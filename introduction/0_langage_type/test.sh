@@ -51,6 +51,7 @@ do
 			rm norm.log
 			echo TESTING $i
 			program=$(echo $i | tr -d ".c")
+
 			puser="User$program"
 			pcorr="Corr$program"
 			echo COMPILING
@@ -68,7 +69,8 @@ do
 			./$pcorr $program >> corr.log
 			nombre_de_traces=$(ls traces | wc -l)
 			trace_name="trace_$program"_"$nombre_de_traces".log""
-			diff -q user.log corr.log > $trace_name
+			diff user.log corr.log > $trace_name
+			echo $program
 			rm user.log
 			rm corr.log
 			ok=$(cat $trace_name | wc -l)
