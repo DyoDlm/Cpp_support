@@ -2,10 +2,7 @@
 
 size_t	ft_strlen(char *s)
 {
-	size_t	i;
-
-	i = 0;
-	while (s && s[i])
-		i++;
-	return (i + 5);
+	//	completer
+	(void)s;
+	return (-1);
 }

@@ -53,24 +53,21 @@ do
 			program=$(echo $i | tr -d ".c")
 			puser="User$program"
 			pcorr="Corr$program"
+			echo COMPILING
+			ls			
+
 			gcc -Wall -Wextra -Werror pastouche/main.c *.c -o $puser > user.log
+			
 			if [ $? -ne 0 ]; then
 				echo "$YELLOW [WARNING] : Compilation failed$NC"
 				pretty_output $ARGS FAILED
 				continue
 			fi
 			gcc -Wall -Wextra -Werror pastouche/main.c pastouche/srcs/*.c -o $pcorr > corr.log
-			echo LS
-			ls
-			echo EXECUTION
-			./$puser >> user.log
-			./$pcorr >> corr.log
-			echo USER LOG
-			cat user.log
-			echo CORR LOG
-			cat corr.log
+			./$puser $program >> user.log
+			./$pcorr $program >> corr.log
 			nombre_de_traces=$(ls traces | wc -l)
-			trace_name="trace_$program'_'$nombre_de_traces'.log'"
+			trace_name="trace_$program"_"$nombre_de_traces".log""
 			diff -q user.log corr.log > $trace_name
 			rm user.log
 			rm corr.log

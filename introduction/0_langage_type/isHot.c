@@ -3,7 +3,7 @@
 
 bool	isHot(const char *s)
 {
-	if (!s)
-		return (false);
-	return (strcmp(s, "siaeite"));
+	//	completer
+	(void)s;
+	return (false);
 }
