@@ -1,0 +1,16 @@
+2,8c2,8
+< Seite is not Hot
+< SeITe is not Hot
+< SehIte is not Hot
+< SEITE is not Hot
+< THOMAS is not Hot
+< COHEN is not Hot
+< MORE TESTS ... is not Hot
+---
+> Seite is Hot
+> SeITe is Hot
+> SehIte is Hot
+> SEITE is Hot
+> THOMAS is Hot
+> COHEN is Hot
+> MORE TESTS ... is Hot

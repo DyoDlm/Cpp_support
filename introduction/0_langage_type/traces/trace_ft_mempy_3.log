@@ -1,0 +1,28 @@
+4c4
+< Dst is : (null)
+---
+> Dst is : abc
+6c6
+< Dst is : (null)
+---
+> Dst is : 12345
+8c8
+< Dst is : (null)
+---
+> Dst is : aec3w5ac
+10c10
+< Dst is : (null)
+---
+> Dst is : c'est une belle journee
+12c12
+< Dst is : (null)
+---
+> Dst is : qu'est ce que je fous devant un ordi 13njc!!!?#a
+14c14
+< Dst is : (null)
+---
+> Dst is : vôÛT
+16c16
+< Dst is : (null)
+---
+> Dst is : Thomas s'est-il bouge le cul ???

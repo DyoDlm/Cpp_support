@@ -1,7 +1,21 @@
 
+
+Pour installer la mini-moulinette et la norminette,
+executer le script install.sh (chmod 666 install.sh pour le rendre executable)
+
+
+
 #   Generalites et structure du repo    #
 
--   Un repertoire "Introduction" si jamais le sombre C tu n'as touche
+-   Un repertoire "Introduction" si jamais le sombre C tu n'as touche,
+    Pour de bonnes habitudes, user de la norminette**
+        
+        1) Module 0, un langage type --> executer test.sh pour correction
+
+        2) Module 1, les headers --> executer la cmd 'mini C08' dans le repertoire
+
+        3) Module 2, makefile --> executer la cmd 'mini C09' dans le repertoire
+
 
 -   Un repertoire "ressources" avec des ressources utilses
 
