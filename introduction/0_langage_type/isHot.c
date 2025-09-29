@@ -21,7 +21,7 @@ bool	isHot(const char *s)
 ///////////////////////////////////////////////////////////////////
 //	conseil
 
-#include <stdlib.h>
+/*#include <stdlib.h>
 void	foo()
 {
 	//	En c, pour manipuler une string (char *) il faut faire une allocation memoire
@@ -42,4 +42,4 @@ void	foo()
 	write(1, fii, 4);
 	//	la je n'ai plus besoin de la chaine donc :
 	free(fii);
-}
+}*/
