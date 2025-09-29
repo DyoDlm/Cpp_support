@@ -5,12 +5,15 @@ Ecrire les fonctions suivantes prototypees telles que :
 
 size_t	ft_strlen(const char *s);
 -->	renvoyer la longueur de la chaine
+ex : "12 34 5" --> 7
 
 void	ft_strToUpper(const char *s);
 -->	afficher la string en minuscules
- 
+ex : "aAaAm12" --> "AAAAM12"
+
 void	ft_strToLower(const char *s);
 -->	afficher la string en majuscules 
+ex : "aAaAm12" --> "aaaam12"
 
 bool	isHot(const char *s);
 -->	si s est "seite" peu importe le lower et upper alors return true, sinon false
@@ -22,5 +25,6 @@ void	*ft_memcpy(void *dst, void *src, size_t dst_size);
 Tu pourras tester avec test.sh tel que :
 	./test.sh strlen
 	./test.sh strToUpper
-	ou
-	./test.sh all
+	ou juste
+	./test.sh
+	pour les tester tous au meme temps 
