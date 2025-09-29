@@ -54,7 +54,7 @@ Si vous ecriver du code sexy (et utile), + de personnes vont vouloir vous aider.
 
 Ne pas hesiter a consulter la rubrique "coding style" chez GNU
 
-Citation de Richar Stallam :
+Citation de Richar Stallman :
    Le style est style, ah, oui oui
 
 
