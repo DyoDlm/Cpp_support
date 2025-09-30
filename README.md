@@ -44,7 +44,10 @@ executer le script install.sh (chmod 666 install.sh pour le rendre executable)
 1) Respecter les formats demander dans les sujets
 Ca me permettra d'integrer des tests plus facilement
 
-2) Pour l'instant testez les vous meme
+2) Pour le repertoire introduction executer :
+    ./test.sh mon_fichier
+
+3) Pour l'instant testez les vous meme
 
 
 

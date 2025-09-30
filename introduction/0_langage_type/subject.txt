@@ -22,9 +22,9 @@ bool	isHot(const char *s);
 void	*ft_memcpy(void *dst, void *src, size_t dst_size);
 -->	Copy src to dst and return pointer of dst
 
-Tu pourras tester avec test.sh tel que :
-	./test.sh strlen
-	./test.sh strToUpper
+Tu pourras tester avec test.sh mon_fichier tel que :
+	./test.sh ft_strlen.c
+	./test.sh ft_strToUpper.c
 	ou juste
 	./test.sh
 	pour les tester tous au meme temps 
