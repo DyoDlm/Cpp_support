@@ -56,18 +56,23 @@ Ca me permettra d'integrer des tests plus facilement
 Si vous ecriver du code sexy (et utile), + de personnes vont vouloir vous aider...
 
 Ne pas hesiter a consulter la rubrique "coding style" chez GNU
+(aller directement rubrique 5.0), link:
+        https://www.gnu.org/prep/standards/standards.html
 
 Citation de Richar Stallman :
    Le style est style, ah, oui oui
 
+(j'ai reformule, mais il penserait surement quelque chose comme :
+    Un code tout seul depanne vite, un code lisible depanne longtemps
+    )
 
-#   En termes pedagogiques, quelques conseil  #
+#   En termes pedagogiques, quelques guidelines  #
 
     A)  Faites vos tests (mains)
 
     C)  Perseverer. Gerer les erreurs c'est 90% du temps qu'on passe a coder
 
-    D)  Trouver vos lignes directrices x0x0
+    D)  Trouver vos guidelines x0x0
 
 
 
@@ -79,7 +84,7 @@ Citation de Richar Stallman :
 
 -   Concevoir son makefile
 
--   make
+-   make ou gcc files.c -o mon_programme
 
 -   ./mon_programme
 
