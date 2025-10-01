@@ -44,8 +44,8 @@ executer le script install.sh (chmod 666 install.sh pour le rendre executable)
 1) Respecter les formats demander dans les sujets
 Ca me permettra d'integrer des tests plus facilement
 
-2) Pour le repertoire introduction executer :
-    ./test.sh mon_fichier
+2) Nommer vos programmes (dans le makefile) : prog_module_exercice
+Exemple pour l'exercice 1 du cpp01 : prog_cpp01_ex01
 
 3) Pour l'instant testez les vous meme
 
